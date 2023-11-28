@@ -1,1 +1,26 @@
-Arquivos do Banco de Dado
+create database db_senac_news;
+
+use db_senac_news;
+
+create table usuario(
+ id_usuario int not null auto_increment primary key,
+ nome varchar(45),
+ email varchar(45),
+ senha varchar(15)
+);
+
+create table categoria(
+	id_categoria int not null auto_increment primary key,
+    nome varchar(15)
+);
+
+create table noticia(
+	id_noticia int not null auto_increment primary key,
+    fk_categorias_id_categoria int,
+    titulo varchar(45),
+    descricao varchar(200),
+    tag varchar(10),
+	data_reportagem datetime,
+    reportagem varchar(1000) ,
+	foreign key(fk_categorias_id_categoria) references categoria(id_categoria)
+);
