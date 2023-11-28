@@ -1,5 +1,8 @@
 
 <?php
+
+require 'controller/conexao.php';
+
 session_start();
 
     if(isset($_POST['Usuario'])){
@@ -21,7 +24,7 @@ session_start();
         $mensagem="Login Incorreto";
     }
 }
-
+    
 ?>
 
 <!DOCTYPE HTML>
@@ -47,7 +50,7 @@ session_start();
             <br>
             <br>
             <a class="a"> É novo por aqui?</a>
-            <a href="#">Cadastrar Usuário</a>
+            <a href="Cadastro.php">Cadastrar Usuário</a>
             <br>
             <a class="a"> Perdeu o Acesso? </a>
             <a href="#">Recuperar Acesso</a>
@@ -65,26 +68,7 @@ session_start();
 
     <br>
 
-<div class='conexao'>
 
-<?php 
-$servename = 'localhost';
-$username = 'root';
-$password = 'root';
-$dbname = 'Avaliacao';
-
-$conn = new mysqli ($servename, $username, $password, $dbname);
-
-if($conn -> connect_error){
-    echo 'Conexão Falhou '.$conn -> connect_error;
-}
-    else{
-        echo "Você está conectado.";
-        echo "<br> <b> Banco de Dado via MySQL </b>";
-        echo" <br>Conexão local <br>";
-}
-?>
-</div>
 
 </body>
 </html>
