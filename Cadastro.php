@@ -1,42 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Área do Usuário</title>
+    <link rel="stylesheet" href="CSS/styleLogin.css">
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function mensagemSucesso(){
+            Swal.fire({
+                title: "Sucesso!",
+                text: "Usuário cadastrado!",
+                icon: "success",
+                timer: 3000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        window.location.href = '/aulas/projeto_integrador/SENAC-ProjetoIntegrador/PaginaLogin.html';
+                    }
+                });
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CADASTRO</h1>
+        <form action="" method="post">
+            <label for="nome">Insira seu usuário: </label>
+            <input type="text" id=username name="username" required placeholder="Usuario"/>
+            <label for="senha">Insira sua senha: </label>
+            <input type="password" id=password name="password" required placeholder="********"/>
+            <input type="submit" value="Cadastrar" />
+            <br>
+            <br>
+        </form>
+    </div>
+    <br>
+</body>
+</html>
+
 <?php 
     require 'controller/conexao.php';
 
     if($_SERVER['REQUEST_METHOD'] == "POST"){
-        $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
+        $usuario = $_POST['username'];
+        $senha = $_POST['password'];
     
-        $sql = "INSERT INTO usuario(nome,senha) VALUES (?,?)";
-        $insert = $conn->prepare($sql);
+        $sql = "INSERT INTO usuario (nome,senha) VALUES (?,?)";
+        $insert = $conn -> prepare($sql);
         $insert->bind_param("ss",$usuario, $senha);
     
-        if($insert->execute()){
-            echo "Usuario cadastrado com sucesso!";
+        if($insert -> execute()){
+            echo '<script> mensagemSucesso(); </script>';
         }
         else{
             echo "Erro ao cadastrar usuario: ". $conn->error;
         }
-        $insert->close();
+        $insert -> close();
     }
     
-    $conn->close();
+    $conn -> close();
     
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se</title>
-</head>
-<body>
-     <form action="PaginaLogin.php" method="POST">
-        <label for="Usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required>
-
-        <label for="Senha">Senha:</label>
-        <input type="passowrd" id="senha" name="senha" required>
-
-        <input type="submit" value="Cadastrar">
-    </form>
-</body>
-</html>
