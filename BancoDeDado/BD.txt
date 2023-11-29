@@ -23,3 +23,9 @@ create table noticia(
     reportagem varchar(1000) ,
 	foreign key(fk_categorias_id_categoria) references categoria(id_categoria)
 );
+
+insert into categoria(nome) values("Politica");
+insert into categoria(nome) values("Esportes");
+insert into categoria(nome) values("Entretenimento");
+insert into categoria(nome) values(" Tempo");
+insert into categoria(nome) values("Outro");
