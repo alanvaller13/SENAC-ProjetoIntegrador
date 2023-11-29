@@ -13,12 +13,12 @@
             flex-direction: column;
             min-height: 100vh;
             background-attachment: fixed;
-            background-color:#F5F5DC;
+            background-color:#fdf5e6;
         }
 
         header {
             text-align: center;
-            background-color: #4CAF50;
+            background-color: #c0c0c0;
             color: white;
             padding: 10px;
             font-size: 20px;
@@ -37,7 +37,7 @@
         table {
             width: 40%;
             border-collapse: collapse;
-            border-radius: 10px, solid black;
+            border-radius: 10px;
             overflow: hidden;
             background-color: rgb(220, 220, 220);
             border:1px solid black;
@@ -50,7 +50,7 @@
         }
 
         th {
-            background-color: #4CAF50;
+            background-color:	#c0c0c0;
             color: white;
         }
 
