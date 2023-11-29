@@ -84,7 +84,7 @@
 <body>
 
 <header>
-    <p>Administração !</p>
+    <p>Administração!</p>
 </header>
 
 <main>
