@@ -56,6 +56,7 @@
         }
 
         p {
+            text-align: center;
             color: black;
         }
 
