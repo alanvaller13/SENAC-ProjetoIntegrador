@@ -34,8 +34,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
   <body>
     <h2>Cadastrar Noticia</h2>
         <form action="#" method="post">
+        
         <label for="">Categoria:</label>
-        <select name="Categorias" id="categorias">
+        <select name="Categorias" id="categorias" required>
             <?php $sql  = mysqli_query($conn, "select id_categoria,nome from categoria");?>
                <?php
               while($categoria = mysqli_fetch_array($sql)){ ?>     
@@ -50,13 +51,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input type="text" id="titulo" name="titulo" required><br><br>
             <br>
             <label for="descricao">Descrição: </label>
-            <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea><br>
+            <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea required><br>
             <br>
             <label for="tag">Tag: </label>
-            <input type="text" name="tag" id="tag">
+            <input type="text" name="tag" id="tag" required>
             <br>
             <label for="reportagem">Reportagem: </label>
-            <textarea name="reportagem" id="reportagem" cols="30" rows="10"></textarea><br>
+            <textarea name="reportagem" id="reportagem" cols="30" rows="10"></textarea required><br>
             <br>
            
 
