@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Área do Usuário</title>
+    <link rel="stylesheet" href="CSS/styleLogin.css">
+    <link rel="icon" type="image/x-icon" href="IMG/Logo.png">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>LOGIN</h1>
+        <form action="PaginaLogin.php" method="post">
+            <label for="nome">Insira seu usuário: </label>
+            <input type="text" id=username name="username" required placeholder="Usuario"/>
+            <label for="senha">Insira sua senha: </label>
+            <input type="password" id=password name="password" required placeholder="********"/>
+            <input type="submit" value="Login" />
+            <br>
+            <br>
+            <a class="a"> É novo por aqui?</a>
+            <a href="CadastroUsuario.php">Cadastrar Usuário</a>
+            <br>
+            <br>
+            <a class="a"> Perdeu o Acesso? </a>
+            <a href="#">Recuperar Acesso</a>
+        </form>
+    </div>
+    <br>
+</body>
+</html>
