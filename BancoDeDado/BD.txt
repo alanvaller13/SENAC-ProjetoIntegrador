@@ -5,7 +5,6 @@ use db_senac_news;
 create table usuario(
  id_usuario int not null auto_increment primary key,
  nome varchar(45),
- email varchar(45),
  senha varchar(15)
 );
 
@@ -24,3 +23,9 @@ create table noticia(
     reportagem varchar(1000) ,
 	foreign key(fk_categorias_id_categoria) references categoria(id_categoria)
 );
+
+insert into categoria(nome) values("Politica");
+insert into categoria(nome) values("Esportes");
+insert into categoria(nome) values("Entretenimento");
+insert into categoria(nome) values(" Tempo");
+insert into categoria(nome) values("Outro");
