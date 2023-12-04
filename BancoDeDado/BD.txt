@@ -23,6 +23,14 @@ create table noticia(
     reportagem varchar(1000) ,
 	foreign key(fk_categorias_id_categoria) references categoria(id_categoria)
 );
+CREATE TABLE `fotos` (
+ `id` int unsigned NOT NULL AUTO_INCREMENT,
+ `nome` varchar(60) NOT NULL,
+ `conteudo` mediumblob NOT NULL,
+ `tipo` varchar(20) NOT NULL,
+ `tamanho` int unsigned NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
 
 insert into categoria(nome) values("Politica");
 insert into categoria(nome) values("Esportes");
