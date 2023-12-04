@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input type="text" name="tag" id="tag" required>
             <br>
             <label for="reportagem">Reportagem: </label>
-            <textarea name="reportagem" id="reportagem" cols="92" rows="10"></textarea required><br>
+            <textarea name="reportagem" id="reportagem" cols="92" rows="25"></textarea required><br>
             <br>
            
 
