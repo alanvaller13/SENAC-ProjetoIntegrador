@@ -30,12 +30,47 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <style>
+
+        body{
+            font-family: 'Arial', sans-serif;
+            margin: 0px;
+            padding: 2% 25% 25% 25%;
+            background-color: #f0f0f0;
+            text-align:center;
+            border-radius:50px;
+            
+
+            
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align:center;
+            font-family:comic;
+            font-size: 30px;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 1px;
+            box-sizing: border-box;
+            text-align:center;
+
+        }
+
+    </style>
 </head>
   <body>
-    <h2>Cadastrar Noticia</h2>
+    <div class="card bg-light text-dark">
+    <h2 class="container p-3 my-3 bg-dark text-white">Cadastrar Noticia</h2>
         <form action="#" method="post">
+        
         <label for="">Categoria:</label>
-        <select name="Categorias" id="categorias">
+        <select name="Categorias" id="categorias" required>
             <?php $sql  = mysqli_query($conn, "select id_categoria,nome from categoria");?>
                <?php
               while($categoria = mysqli_fetch_array($sql)){ ?>     
@@ -50,13 +85,13 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input type="text" id="titulo" name="titulo" required><br><br>
             <br>
             <label for="descricao">Descrição: </label>
-            <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea><br>
+            <textarea name="descricao" id="descricao" cols="92" rows="10"></textarea required><br>
             <br>
             <label for="tag">Tag: </label>
-            <input type="text" name="tag" id="tag">
+            <input type="text" name="tag" id="tag" required>
             <br>
             <label for="reportagem">Reportagem: </label>
-            <textarea name="reportagem" id="reportagem" cols="30" rows="10"></textarea><br>
+            <textarea name="reportagem" id="reportagem" cols="92" rows="25"></textarea required><br>
             <br>
            
 
@@ -64,5 +99,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             <input type="submit" value="Adicionar Noticia">
     
         </form>
+        </div>
   </body>
 </html>
