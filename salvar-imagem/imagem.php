@@ -1,6 +1,6 @@
 <?php
 // Incluindo arquivo de conexão
-require_once('../controller/conexao.php');
+require_once('config/conn.php');
 
 $id = (int) $_GET['id'];
 
@@ -12,7 +12,7 @@ $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 if ($stmt->execute())
 {
     // Alocando foto
-    $foto = $stmt->fetch_Object();
+    $foto = $stmt->fetchObject();
     
     // Se existir
     if ($foto != null)
