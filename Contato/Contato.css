@@ -1,0 +1,128 @@
+.formulario {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.campos {
+    margin-bottom: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+#enviar {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 50%;
+}
+
+#enviar:hover {
+    background-color: #45a049;
+}
+
+main{
+    margin-top: 10px;
+}
+
+.navbar{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.navbar-nav{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.fakeimg{
+    height: 200px;
+    background: #aaa;
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    background: #252d3d;
+  }
+  
+.rating{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateY(180deg);
+    display: flex;
+}
+
+.ratingDoContra{
+    margin-top: 100px;
+    margin-left: 100px;
+    transform: translate(50%, 50%) rotateY(180deg);
+}
+  
+.rating input{
+    display: none;
+}
+  
+.rating label{
+      display: block;
+      cursor: pointer;
+      width: 50px;
+}
+  
+.rating label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: relative;
+    display: block;
+    font-size: 50px;
+    color: #0e1316;
+}
+  
+.rating label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color: #ffff00;
+    top: 0;
+    opacity: 0;
+    transition: .5;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, .5);
+}
+  .rating label:hover:after,
+  .rating label:hover ~ label:after,
+  .rating input:checked ~ label:after{
+    opacity: 1;
+}
