@@ -10,7 +10,7 @@ use PHPMailer\PHPMailer\Exception;
 $mensagemEmail = '
 <html lang="pt-BR">
     <meta content="text/html" charset="ISO-8859-1">
-    <h1>Descreva o assunto do seu contato:</h1>
+    <h1>Descreva o assunto do seu contato</h1>
     <p>'.$_POST['assunto'].'</p>
 
     <h1>Descreva a razão do seu contato</h1>
@@ -18,9 +18,6 @@ $mensagemEmail = '
 
     <h1>Deixe sua crítica construtiva a nós!</h1>
     <p>'.$_POST['critica'].'</p>
-
-    <h1>Como você se sentiu utilizando nossos serviços?</h1>
-    <p>'.$_POST['feedback'].'</p>
 </html>';
 
 $email = new PHPMailer();

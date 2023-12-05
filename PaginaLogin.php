@@ -16,7 +16,7 @@ session_start();
             session_start();
             $_SESSION['username'] = $username;
     
-            header('Location: index.html');
+            header('Location: dashboard.php');
         }else{
             header('Location: PaginaLogin.html');
         };

@@ -85,19 +85,35 @@
                         <input name="critica" id="critica" type="text">
                     </div>
                     
-                    <div class="rating">
-                        <p class="ratingDoContra">Como você se sentiu utilizando nossos serviços?</p>
-                        <br>
-                        <input type="radio" name="star" id="star1"><label for="star1"></label>
-                        <input type="radio" name="star" id="star2"><label for="star2"></label>
-                        <input type="radio" name="star" id="star3"><label for="star3"></label>
-                        <input type="radio" name="star" id="star4"><label for="star4"></label>
-                        <input type="radio" name="star" id="star5"><label for="star5"></label>
-                      </div>
+                    <div class="campos">
+                        <ul class="feedback">
+                          <label id="feedback">Como você se sentiu utilizando nossos serviços?</label>
+                          <div class="teste">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                          </div>
+                        </ul>
+                    </div>
                 
                     <button id="enviar" type="submit">Enviar</button>
                 </form>
             </div>
+            <script>
+              var stars = document.querySelectorAll('.star-icon');
+                  document.addEventListener('click', function(e){
+                    var classStar = e.target.classList;
+                    if(!classStar.contains('ativo')){
+                      stars.forEach(function(star){
+                        star.classList.remove('ativo');
+                      });
+                      classStar.add('ativo');
+                      console.log(e.target.getAttribute('data-avaliacao'));
+                    }
+                  });
+            </script>
         </main>
     </body>
 </html>
