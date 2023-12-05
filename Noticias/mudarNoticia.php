@@ -43,6 +43,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atualizar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
     <script>
     function preencherFormulario(id, categorias, titulo, descricao, tag, reportagem) {
         console.log("ID: " + id + ", Categorias: " + categorias + ", Titulo: " + titulo + ", Descricao: " + descricao + ", Tag: " + tag + ", Reportagem: " + reportagem);
@@ -61,10 +63,47 @@
 }
 
 </script>
+<style>
+            body{
+            font-family: 'Arial', sans-serif;
+            margin: 0px;
+            padding: 0% 25% 25% 25%;
+            background-color: #f0f0f0;
+            text-align:center;
+            border-radius:50px;
+            
+
+            
+        }
+        label{
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align:center;
+            font-family:comic;
+            font-size: 30px;
+        }
+        input{
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 1px;
+            box-sizing: border-box;
+            text-align:center;
+
+        }
+        .table{
+
+            padding: 5px;
+            
+        }
+
+
+</style>
 
 </head>
 <body>
-    <h1>Atualizar noticia</h1>
+    <div class="card bg-light text-dark">
+    <h1 class="container p-3 my-3 bg-dark text-white">Atualizar noticia</h1>
 
     
 
@@ -88,13 +127,13 @@
                 <input type="text" id="titulo" name="titulo" required><br><br>
             <br>
                 <label for="descricao">Descrição: </label>
-                <textarea name="descricao" id="descricao" cols="30" rows="10" required></textarea><br>
+                <textarea name="descricao" id="descricao" cols="91" rows="10" required></textarea><br>
             <br>
                 <label for="tag">Tag: </label>
                 <input type="text" name="tag" id="tag" required>
             <br>
                 <label for="reportagem">Reportagem: </label>
-                <textarea name="reportagem" id="reportagem" cols="30" rows="10" required></textarea><br>
+                <textarea name="reportagem" id="reportagem" cols="91" rows="20" required></textarea><br>
             <br>
            
 
@@ -103,10 +142,12 @@
     
         </form> 
 
-
-    <table>
+        </div> 
+        <div class="table">
+    <table class="table-bordered">
             <tr>
-                <th>Categoria</th>
+                <th>Id</th>
+                <th>Categoria</th><br>
                 <th>Titulo</th>
                 <th>Descrição</th>
                 <th>Tag</th>
@@ -115,6 +156,7 @@
                 <th>Atualizar</th>
                 <th>Deletar</th>
             </tr>
+           
         <?php 
 
                 
@@ -146,6 +188,6 @@
                 $conn->close();
         ?>
     </table>
-
+    </div>         
 </body>
 </html>
