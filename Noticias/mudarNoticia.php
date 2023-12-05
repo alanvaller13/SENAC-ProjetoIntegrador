@@ -10,10 +10,10 @@
         $tag = $_POST['tag'];
         $reportagem = $_POST['reportagem'];
 
-        $stmt = $conn->prepare("UPDATE noticia SET categoria=?, titulo=?, descricao=?, tag=?, reportagem=? WHERE id_noticia=?");   
+        $stmt = $conn->prepare("UPDATE noticia SET fk_categorias_id_categoria=?, titulo=?, descricao=?, tag=?, reportagem = ? WHERE id_noticia=?");
         $stmt->bind_param("issssi", $categoria, $titulo, $descricao, $tag, $reportagem, $id);
         $stmt->execute();
-
+        
         if ($stmt->affected_rows > 0) {
             echo "Notícia atualizada com sucesso";
         } else {
@@ -47,7 +47,7 @@
 
     <script>
     function preencherFormulario(id, categoria, titulo, descricao, tag, reportagem) {
-        console.log("ID: " + id + ", categoria: " + categoria + ", Titulo: " + titulo + ", Descricao: " + descricao + ", Tag: " + tag + ", Reportagem: " + reportagem);
+        console.log("ID: " + id + ", categoria: " + categoria + ", Titulo: " + titulo + ", descricao: " + descricao + ", Tag: " + tag + ", Reportagem: " + reportagem);
         document.getElementById('id').value = id;
         document.getElementById('categoria').value = categoria;
         document.getElementById('titulo').value = titulo;
@@ -111,15 +111,15 @@
 
         <input type="hidden" id="id" name="id">
         
-            <label for="">Categoria:</label>
-             <select name="categoria" id="categoria">
-            <?php $sql  = mysqli_query($conn, "select id_categoria,nome from categoria");?>
-               <?php
-              while($categoria = mysqli_fetch_array($sql)){ ?>     
-                  <option value="<?=  $categoria['id_categoria'] ?>"><?php echo $categoria['nome']; ?></option>
-                  <?php } ?>
-                
-            </select>
+        <label for="categoria">Categoria:</label>
+<select name="categoria" id="categoria">
+    <?php $sql  = mysqli_query($conn, "select id_categoria,nome from categoria");?>
+    <?php
+        while($categoria = mysqli_fetch_array($sql)){ ?>     
+            <option value="<?=  $categoria['id_categoria'] ?>"><?php echo $categoria['nome']; ?></option>
+    <?php } ?>
+</select>
+
             <br>
             <br>
             
