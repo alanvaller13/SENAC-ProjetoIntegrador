@@ -1,0 +1,24 @@
+(FONTE TECNOLOGIA)
+https://g1.globo.com/tecnologia/noticia/2023/11/30/whatsapp-cria-recurso-de-codigo-secreto-para-proteger-conversas-veja-como-vai-funcionar.ghtml
+
+(TITULO)
+WhatsApp lança recurso de código secreto para proteger conversas; veja como vai funcionar 
+
+
+(INTRODUÇÃO ANTES DA IMAGEM)
+Até então, conversas ocultas do aplicativo só podiam ser protegidas pela mesma senha e biometria usadas para desbloquear a tela do celular. Com nova funcionalidade, é possível criar uma nova senha para esconder mensagens. 
+
+
+(CONTEUDO/ARTIGO)
+
+O WhatsApp agora permite esconder conversas com um código secreto próprio para isso, e não só com o método de desbloqueio do celular. O recurso será a ser liberado gradualmente a partir desta quinta-feira (30) e chega para todos os usuários nos próximos meses.
+
+A novidade é uma expansão das conversas ocultas, que tinham sido liberadas em maio. Até então, para proteger as conversas do WhatsApp, só era permitido usar a mesma senha e biometria (digital ou facial) usadas para liberar a tela do celular.
+
+O método não garante tanta privacidade nos casos em que alguém sabe a senha de desbloqueio do smartphone. Além disso, mesmo sem acessar mensagens ocultas, outra pessoa pode saber que há uma pasta secreta ao deslizar para baixo a lista de conversas do WhatsApp.
+
+Os usuários também tem a opção de só exibir o atalho para as conversas ocultas depois de inserirem o código secreto na barra de pesquisa. O WhatsApp também deixará esconder um bate-papo ao pressionar e segurar sobre ela na lista de conversas do aplicativo.
+
+Segundo o WhatsApp, a ideia é criar uma amada extra de privacidade para dificultar o acesso às suas conversas confidenciais caso alguém tenha acesso ao seu telefone.
+
+"Acreditamos que todos têm direito à privacidade, quer estejam compartilhando seu telefone com outra pessoa ou se encontrem em uma situação vulnerável e precisem de proteções adicionais", diz a plataforma.

@@ -128,7 +128,7 @@
                     <td class="button-container">
                         <button class="button is-outlined" onclick="window.location.href='Noticias/cadastroNoticia.php'">Cadastrar Notícia</button>
                         <button class="button is-outlined" onclick="window.location.href='#'">Deletar Notícia</button>
-                        <button class="button is-outlined" onclick="window.location.href='Noticias/updateNoticia.php'">Atualizar Notícia</button>
+                        <button class="button is-outlined" onclick="window.location.href='Noticias/mudarNoticia.php'">Atualizar Notícia</button>
                         <button class="button is-outlined" onclick="window.location.href='#'">Mostrar Noticias</button>
                     </td>
                 </tr>
