@@ -3,15 +3,15 @@
 
  //UPDATE       
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $id = $_POST['id_noticia'];
+        $id = $_POST['id'];
         $categoria = $_POST['categoria'];
         $titulo = $_POST['titulo'];
         $descricao = $_POST['descricao'];
         $tag = $_POST['tag'];
         $reportagem = $_POST['reportagem'];
 
-        $stmt = $conn->prepare("UPDATE noticia SET categoria=?, titulo=?, descricao=?, tag=?, reportagem=? WHERE id=?");
-        $stmt->bind_param("sssssi", $categoria, $titulo, $descricao, $tag, $reportagem, $id);
+        $stmt = $conn->prepare("UPDATE noticia SET categoria=?, titulo=?, descricao=?, tag=?, reportagem=? WHERE id_noticia=?");   
+        $stmt->bind_param("issssi", $categoria, $titulo, $descricao, $tag, $reportagem, $id);
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
@@ -46,10 +46,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
     <script>
-    function preencherFormulario(id, categorias, titulo, descricao, tag, reportagem) {
-        console.log("ID: " + id + ", Categorias: " + categorias + ", Titulo: " + titulo + ", Descricao: " + descricao + ", Tag: " + tag + ", Reportagem: " + reportagem);
+    function preencherFormulario(id, categoria, titulo, descricao, tag, reportagem) {
+        console.log("ID: " + id + ", categoria: " + categoria + ", Titulo: " + titulo + ", Descricao: " + descricao + ", Tag: " + tag + ", Reportagem: " + reportagem);
         document.getElementById('id').value = id;
-        document.getElementById('categorias').value = categorias;
+        document.getElementById('categoria').value = categoria;
         document.getElementById('titulo').value = titulo;
         document.getElementById('descricao').value = descricao;
         document.getElementById('tag').value = tag;
@@ -58,7 +58,7 @@
     function ConfirmarDelecao(id, titulo) {
         var resposta = confirm("Você tem certeza que deseja apagar a notícia com o título: " + titulo + "?");
         if (resposta) {
-         window.location.href = "atualizarNoticia.php?id=" + id;
+         window.location.href = "mudarNoticia.php?id=" + id;
     }
 }
 
@@ -103,7 +103,7 @@
 </head>
 <body>
     <div class="card bg-light text-dark">
-    <h1 class="container p-3 my-3 bg-dark text-white">Atualizar noticia</h1>
+    <h1 class="container p-3 my-3 bg-dark text-white">Mudar noticia</h1>
 
     
 
@@ -112,7 +112,7 @@
         <input type="hidden" id="id" name="id">
         
             <label for="">Categoria:</label>
-             <select name="Categorias" id="categorias">
+             <select name="categoria" id="categoria">
             <?php $sql  = mysqli_query($conn, "select id_categoria,nome from categoria");?>
                <?php
               while($categoria = mysqli_fetch_array($sql)){ ?>     
