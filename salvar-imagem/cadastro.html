@@ -25,6 +25,7 @@
                 var botao = $('#salvar');
                 var mensagem = $('#mensagem');
 
+<<<<<<< HEAD
                 // Exibindo indicador de carregamento (Bootstrap)
                 // Docs: http://getbootstrap.com/javascript/#buttons
                 botao.button('loading');
@@ -39,6 +40,17 @@
                     success: function (retorno) {
 
                         // Se cadastrado com sucesso
+=======
+              
+                botao.button('loading');
+
+                $(this).ajaxSubmit({
+
+                    dataType: 'json',
+
+                    success: function (retorno) {
+
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
                         if (retorno.sucesso) {
                             // Definindo estilo da mensagem (sucesso)
                             mensagem.attr('class', 'alert alert-success');
@@ -51,14 +63,21 @@
                             mensagem.attr('class', 'alert alert-danger');
                         }
 
+<<<<<<< HEAD
                         // Exibindo mensagem
                         mensagem.html(retorno.mensagem);
 
                         // Escondendo indicador de carregamento
+=======
+   
+                        mensagem.html(retorno.mensagem);
+
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
                         botao.button('reset');
 
                     },
 
+<<<<<<< HEAD
                     // Se houver algum erro na requisição
                     error: function () {
 
@@ -69,12 +88,28 @@
                         mensagem.html('Oops, ocorreu um erro');
 
                         // Escondendo indicador de carregamento
+=======
+                  
+                    error: function () {
+
+                        
+                        mensagem.attr('class', 'alert alert-danger');
+
+                       
+                        mensagem.html('Oops, ocorreu um erro');
+
+                    
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
                         botao.button('reset');
                     }
 
                 });
 
+<<<<<<< HEAD
                 // Retorna FALSE para que o formulário não seja enviado de forma convencional
+=======
+
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
                 return false;
 
             });

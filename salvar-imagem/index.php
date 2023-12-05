@@ -20,7 +20,11 @@ $stmt = $conn->query('SELECT id, nome, tipo, tamanho FROM fotos');
 
 <div class="container">
 
+<<<<<<< HEAD
     <h1>Salvar imagem no banco de dados com PHP/MySQL</h1>
+=======
+    <h1>Salve Sua imagem!</h1>
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
 
     <p>
         <a class="btn btn-success" href="cadastro.html">Cadastrar</a>
