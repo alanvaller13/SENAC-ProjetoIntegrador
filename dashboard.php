@@ -118,28 +118,6 @@
 
     <br>
 
-    <section> 
-
-    <?php
-    session_start();
-
-    // include ' *ADICIONAR inclusão do Banco de dado*';
-
-   
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']==false){
-        header('Location: PaginaLogin.html'); 
-    }
-    
-    else{
-        echo "Bem vindo, ".$_SESSION['Login']."!<br>";
-        echo "<a classe='link' href='PaginaLogout.php'> Logout </a> <br>";
-        echo "<a href='Pagina404.php'> Suporte </a> <br>";
-    }
-    
-    ?>
-
-    </section>
-
     <main>
         <tbody>
             <table>
