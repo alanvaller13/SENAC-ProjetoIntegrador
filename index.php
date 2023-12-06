@@ -220,9 +220,9 @@
               $sql = "SELECT * FROM noticia";
               $result = $conn->query($sql);
           
-              // Verificar se há resultados
+           
               if ($result->num_rows > 0) {
-                  // Exibir as notícias
+              
                   while ($row = $result->fetch_assoc()) {
                       echo "<div class='box2'>";
                  
@@ -235,7 +235,7 @@
                   echo "Nenhuma notícia encontrada.";
               }
           
-              // Fechar a conexão
+          
               $conn->close();        
         ?>
   </div>
