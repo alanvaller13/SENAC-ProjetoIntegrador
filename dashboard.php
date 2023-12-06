@@ -127,7 +127,7 @@
 
    
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']==false){
-        header('Location: PaginaLogin.html'); 
+        header('Location: dashboard.php'); 
     }
     
     else{
