@@ -35,7 +35,7 @@
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-            border: 1px solid black;
+            border: 1px ;
         }
 
         table {
@@ -90,12 +90,12 @@
         }
 
         .hero-body {
-            border: 1px solid black;
+            border: 1px solid;
 
         }
 
         tbody {
-            border: 1px solid black;
+            border: 1px;
         }
     </style>
 </head>
@@ -116,6 +116,30 @@
         </div>
     </section>
 
+    <br>
+
+    <section> 
+
+    <?php
+    session_start();
+
+    // include ' *ADICIONAR inclusão do Banco de dado*';
+
+   
+    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']==false){
+        header('Location: PaginaLogin.html'); 
+    }
+    
+    else{
+        echo "Bem vindo, ".$_SESSION['Login']."!<br>";
+        echo "<a classe='link' href='PaginaLogout.php'> Logout </a> <br>";
+        echo "<a href='Pagina404.php'> Suporte </a> <br>";
+    }
+    
+    ?>
+
+    </section>
+
     <main>
         <tbody>
             <table>
@@ -130,6 +154,15 @@
                         <button class="button is-outlined" onclick="window.location.href='#'">Deletar Notícia</button>
                         <button class="button is-outlined" onclick="window.location.href='Noticias/mudarNoticia.php'">Atualizar Notícia</button>
                         <button class="button is-outlined" onclick="window.location.href='#'">Mostrar Noticias</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="button-container">
+                        <button class="button is-outlined" onclick="window.location.href='Noticias/cadastroNoticia.php'">Cadastrar Usuário</button>
+                        <button class="button is-outlined" onclick="window.location.href='#'">Deletar Usuário</button>
+                        <button class="button is-outlined" onclick="window.location.href='Noticias/mudarNoticia.php'">Atualizar Usuário</button>
+                        <button class="button is-outlined" onclick="window.location.href='#'">Mostrar Usuário</button>
                     </td>
                 </tr>
             </table>
