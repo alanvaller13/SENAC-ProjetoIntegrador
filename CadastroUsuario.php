@@ -60,7 +60,7 @@
             echo '<script> mensagemSucesso(); </script>';
         }
         else{
-            echo "Erro ao cadastrar usuario: ". $conn->error;
+            echo "Erro ao cadastrar usuario: ". $conn -> error;
         }
         $insert -> close();
     }

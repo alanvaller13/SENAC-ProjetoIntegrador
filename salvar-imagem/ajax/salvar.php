@@ -1,6 +1,10 @@
 <?php
 // Incluindo arquivo de conexão
+<<<<<<< HEAD
+require_once('../../controller/conexao.php');
+=======
 require_once('../config/conn.php');
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
 
 // Funções de utilidade
 require_once('../funcs/util.php');
@@ -49,5 +53,9 @@ $stmt->bindParam(':tipo', $tipo, PDO::PARAM_STR);
 $stmt->bindParam(':tamanho', $tamanho, PDO::PARAM_INT);
 
 // Executando e exibindo resultado
+<<<<<<< HEAD
+echo ($stmt->execute()) ? retorno('Foto cadastrada com sucesso', true) : retorno($stmt->errorInfo());
+=======
 echo ($stmt->execute()) ? retorno('Foto cadastrada com sucesso', true) : retorno($stmt->errorInfo());
 
+>>>>>>> 2def140f936cc87d6bd9458fec9a14672806381f
