@@ -36,9 +36,7 @@
             <input type="text" id=username name="username" required placeholder="Usuario"/>
             <label for="senha">Insira sua senha: </label>
             <input type="password" id=password name="password" required placeholder="********"/>
-            <label for="email">Insira seu E-mail: </label>
-            <input type="email" id="email" name="email" required placeholder="E-mail"/>
-            <input type="submit" value="Cadastrar" />
+                        <input type="submit" value="Cadastrar" />
             <br>
             <br>
         </form>
@@ -53,11 +51,10 @@
     if($_SERVER['REQUEST_METHOD'] == "POST"){
         $usuario = $_POST['username'];
         $senha = $_POST['password'];
-        $email =$_POST ['email'];
     
-        $sql = "INSERT INTO usuario (nome,senha,email) VALUES (?,?,?)";
+        $sql = "INSERT INTO usuario (nome,senha,) VALUES (?,?)";
         $insert = $conn -> prepare($sql);
-        $insert->bind_param("sss",$usuario, $senha, $email);
+        $insert->bind_param("si",$usuario, $senha);
     
         if($insert -> execute()){
             echo '<script> mensagemSucesso(); </script>';
