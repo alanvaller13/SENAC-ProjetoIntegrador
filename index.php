@@ -214,45 +214,30 @@
     <div class="postagem">
     <h3> Notícias</h3>
     <div class="news">
+        <?php 
+              require 'controller/conexao.php';
 
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 1</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 2</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 3</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 4</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 5</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-      <div class="">
-        <img src="IMG/joaçaba.jpg" alt="image_description" class="img-fluid">
-        <h2>Title 6</h2>
-        <p>Description</p>
-        <a href="link_to_full_story" class="btn btn-primary">Saiba mais</a>
-      </div>
-    </div>
+              $sql = "SELECT * FROM noticia";
+              $result = $conn->query($sql);
+          
+           
+              if ($result->num_rows > 0) {
+              
+                  while ($row = $result->fetch_assoc()) {
+                      echo "<div class='box2'>";
+                 
+                      echo "<h2>{$row['titulo']}</h2>";
+                      echo "<p>{$row['descricao']}</p>";
+                      echo "<a href='detalhes_noticia.php?id={$row['id_noticia']}' class='btn btn-primary'>Saiba mais</a>";
+                      echo "</div>";
+                  }
+              } else {
+                  echo "Nenhuma notícia encontrada.";
+              }
+          
+          
+              $conn->close();        
+        ?>
   </div>
 
   <br>
