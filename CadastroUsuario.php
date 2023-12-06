@@ -21,7 +21,7 @@
                 allowEnterKey: false
                 }).then((result) => {
                     if (result.dismiss === Swal.DismissReason.timer) {
-                        window.location.href = '/projeto/SENAC-ProjetoIntegrador/PaginaLogin.html';
+                        window.location.href = '/aulas/projeto_integrador/SENAC-ProjetoIntegrador/PaginaLogin.html';
                     }
                 });
         };

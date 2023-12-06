@@ -137,7 +137,7 @@
 
                 <tr>
                     <td class="button-container">
-                        <button class="button is-outlined" onclick="window.location.href='Noticias/cadastroNoticia.php'">Cadastrar Usuário</button>
+                        <button class="button is-outlined" onclick="window.location.href='CadastroUsuario.php'">Cadastrar Usuário</button>
                         <button class="button is-outlined" onclick="window.location.href='#'">Deletar Usuário</button>
                         <button class="button is-outlined" onclick="window.location.href='Noticias/mudarNoticia.php'">Atualizar Usuário</button>
                         <button class="button is-outlined" onclick="window.location.href='#'">Mostrar Usuário</button>
