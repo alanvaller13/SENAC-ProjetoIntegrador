@@ -1,0 +1,7 @@
+{
+    "functions":{
+        "SENAC-ProjetoIntegrador/*.php": {
+            "runtime": "vercel-php@0.4.0"
+        }
+    }
+}
