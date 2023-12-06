@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $sql = "INSERT INTO noticia (fk_categorias_id_categoria,titulo,descricao,tag,reportagem,data_reportagem) VALUES (?, ?, ?, ?, ?,now())";
     $insert = $conn->prepare($sql);
     $insert->bind_param("issss",$categoria,$titulo, $descricao,$tag,$reportagem);
-
+ 
     if($insert->execute()){
         echo " Manchete adicionada com sucesso!";
     }

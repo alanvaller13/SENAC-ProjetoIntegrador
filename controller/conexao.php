@@ -11,7 +11,6 @@
             throw new Exception('Conexão Falhou ' . $conn->connect_error);
         }
 
-        echo "Você está conectado.";
     } catch (Exception $e) {
         echo 'Erro: ' . $e->getMessage();
     }
